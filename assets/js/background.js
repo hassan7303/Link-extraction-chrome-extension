@@ -3,8 +3,11 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.action.onClicked.addListener((tab) => {
+    console.log("آیکن افزونه کلیک شد.");
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        files: ["./content.js"]
+        files: ["assets/js/content.js"]
+    }, () => {
+        console.log("اسکریپت content.js با موفقیت به تب تزریق شد.");
     });
 });
