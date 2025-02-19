@@ -67,23 +67,20 @@
 
 ```json
 {
-  "manifest_version": 3,
-  "name": "استخراج لینک‌ها",
-  "version": "1.0",
-  "description": "این افزونه لینک‌های صفحه را لیست و کپی می‌کند.",
-  "permissions": ["activeTab", "scripting", "clipboardWrite"],
-  "host_permissions": ["<all_urls>"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
-  }
+    "manifest_version": 3,
+    "name": "استخراج لینک‌ها",
+    "version": "1.0",
+    "description": "این افزونه لینک‌های صفحه را لیست و کپی می‌کند.",
+    "author": "Hassan Ali Askari",
+    "homepage_url": "https://hsnali.ir",
+    "permissions": ["activeTab", "scripting", "clipboardWrite"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icon": "./assets/images/icon.png"
+    },
+    "background": {
+        "service_worker": "./assets/js/background.js"
+    }
 }
 ```
