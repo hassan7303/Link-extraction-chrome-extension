@@ -1,0 +1,19 @@
+body {
+    width: 250px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+button {
+    padding: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 90%;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    margin: 10px 0;
+    resize: none;
+}
