@@ -80,7 +80,13 @@
         "default_icon": "./assets/images/icon.png"
     },
     "background": {
-        "service_worker": "./assets/js/background.js"
-    }
+        "service_worker": "assets/js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["assets/js/content.js"]
+        }
+    ]
 }
 ```
