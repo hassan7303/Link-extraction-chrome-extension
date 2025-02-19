@@ -1,11 +1,8 @@
-function getAllLinks() {
-    let links = document.querySelectorAll("a");
-    let linkList = Array.from(links).map(link => link.href).filter(href => href);
-    return linkList.join("\n");
-}
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "getLinks") {
-        sendResponse({ links: getAllLinks() });
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === "getLinks") {
+        let links = Array.from(document.getElementsByTagName("a")).map(a => a.href);
+        console.log("Links found: ", links);
+        sendResponse({ links: links });
     }
+    return true; 
 });
